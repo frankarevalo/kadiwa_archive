@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace kadiwa_archive
 {
     public partial class login : Form
@@ -81,5 +82,9 @@ namespace kadiwa_archive
 
         #endregion
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

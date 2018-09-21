@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kadiwa_archive", "kadiwa_archive\kadiwa_archive.csproj", "{5D13BD28-B846-4899-A2A5-6EACC1453AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A9E84E50-FDD0-4386-BF4D-EA9E115F467E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D13BD28-B846-4899-A2A5-6EACC1453AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D13BD28-B846-4899-A2A5-6EACC1453AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D13BD28-B846-4899-A2A5-6EACC1453AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D13BD28-B846-4899-A2A5-6EACC1453AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E84E50-FDD0-4386-BF4D-EA9E115F467E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E84E50-FDD0-4386-BF4D-EA9E115F467E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E84E50-FDD0-4386-BF4D-EA9E115F467E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E84E50-FDD0-4386-BF4D-EA9E115F467E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

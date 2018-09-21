@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DataManager;
+using Utilities;
+using DataObject;
 
 namespace kadiwa_archive
 {
@@ -78,13 +81,25 @@ namespace kadiwa_archive
             txtPassword.PasswordChar = '\0';
             txtUsername.Text = "Username";
             txtPassword.Text = "Password";
+            lblmessage.Text = "";
         }
 
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            Users users = new Users();
+            users.username = txtUsername.Text.Trim();
+            users.password = txtPassword.Text.Trim();
+
+            UsersOutput usersOutput = new UsersOutput();
+            usersOutput.responsecode = ResponseCodes.Fail;
+
+            UsersManager usersManager = new UsersManager();
+            usersManager.Login(users, ref usersOutput);
+
+            lblmessage.Text = usersOutput.message;
+
         }
     }
 }

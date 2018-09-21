@@ -12,7 +12,7 @@ namespace DataAccess
     {
         private static Dictionary<string, string> providers = new Dictionary<string, string>()
         {
-            { ".accdb", "Microsoft.ACE.OLEDB.12.0:Database Password=kadiwaarchive" },
+            { ".accdb", "Microsoft.ACE.OLEDB.12.0;Jet OLEDB:Database Password=kadiwaarchive" },
             { ".mdb" , "Microsoft.Jet.OLEDB.4.0" }
         };
 
@@ -21,7 +21,8 @@ namespace DataAccess
             OleDbConnectionStringBuilder Builder = new OleDbConnectionStringBuilder
             {
                 Provider = providers[Path.GetExtension(databaseName).ToLower()],
-                DataSource = databaseName
+                DataSource = databaseName,
+                ["Jet OLEDB:Database Password"] = "kadiwaarchive"
             };
 
             return Builder.ConnectionString;

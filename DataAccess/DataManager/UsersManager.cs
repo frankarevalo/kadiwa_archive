@@ -18,14 +18,12 @@ namespace DataManager
         private string fileName = "";
         public UsersManager()
         {
-            fileName = @"C:\SVN Training\Kadiwa Archive\kadiwa_archive\DataAccess\App_Data\main.accdb";
+            fileName = @"C:\SVN Training\Kadiwa Archive\kadiwa_archive\DataAccess\App_Data\main.mdb";
         }
 
-        public void Login (Users users, UsersOutput usersOutput)
+        public void Login (Users users, ref UsersOutput usersOutput)
         {
-
-            usersOutput.responsecode = ResponseCodes.Fail;
-
+            
             try
             {
                 using (OleDbConnection conn = new OleDbConnection { ConnectionString = fileName.BuildConnectionString() })
@@ -46,6 +44,10 @@ namespace DataManager
                             usersOutput.status = row["status"].ToString().Trim();
                             usersOutput.message = "Success";
                             usersOutput.responsecode = ResponseCodes.Success;
+                        }
+                        else
+                        {
+                            usersOutput.message = "Invalid Username/Password";
                         }
                     }
                 }
